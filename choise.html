@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Learn programming with Lpys</title>
+  <link rel="shortcut icon" href="assets/images/Lpys (10).png" type="image/x-icon">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+
+  <style>
+    /* CSS for Problem Item */
+    .problem-item {
+  flex: 0 0 auto;
+  width: 22%;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  border: 2px solid #3498db;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  background-color: #ecf0f1;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  position: relative; 
+  bottom: -80px;
+  flex-direction: column;
+  align-items: center; /* توسيط عمودي */
+}
+
+    .problem-item:hover {
+      transform: scale(1.05);
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .problem-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .problem-description {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* CSS for Problem Row */
+    .problem-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* CSS for Difficulty Buttons */
+    .difficulty-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .difficulty-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    .difficulty-buttons button.active {
+      background-color: #fff;
+      color: #3498db;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  
+  
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              <img src="assets/images/Lpys.png">
+            </a> 
+            <!-- ***** Logo Start ***** -->
+           <!-- <a href="index.html" class="logo">-->
+             <!-- <img src="assets/images/logo.png">-->
+           <!-- </a>
+           <!--  ***** Logo End *****  -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="index.html">Home</a></li>
+              <li class="scroll-to-section"><a href="lessons.html">Lessons</a></li>
+              <li class="scroll-to-section"><a href="choiseexer.html">Exercice</a></li> 
+              <li class="scroll-to-section"><a href="course.html">courses</a></li> 
+              <li class="scroll-to-section"><a href="choise.html" class="active" >Problem solving</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Get started</a></div></li>
+            </ul>   
+            
+            
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div id="problem-solving" class="problem-solving section">
+    <div class="container">
+      
+      <div class="section-heading">
+        <h2>Problem Solving</h2>
+        <span>Challenges to Sharpen Your Skills</span>
+      </div>
+      <!-- المشاكل الجديدة -->
+      <div id="problem-solving" class="problem-solving section">
+        <div class="container">
+          
+          <!-- المشاكل الجديدة -->
+          <div class="problem-row">
+            <a href="problem.html" class="problem-item easy">
+              <h3 class="problem-title">Easy</h3>
+              <p class="problem-description">Raise your logic in programming with easy problem solving.</p>
+            </a>
+            <a href="problem2.html" class="problem-item medium">
+              <h3 class="problem-title">Hard</h3>
+              <p class="problem-description">Raise your logic in programming with hard problem solving.</p>
+            </a>
+
+  <script>
+    function filterProblems(difficulty) {
+      const problemItems = document.querySelectorAll('.problem-item');
+
+      problemItems.forEach(item => {
+        item.style.display = 'none';
+        if (difficulty === 'all' || item.classList.contains(difficulty)) {
+          item.style.display = 'flex';
+        }
+      });
+
+      const buttons = document.querySelectorAll('.difficulty-buttons button');
+      buttons.forEach(button => {
+        button.classList.remove('active');
+      });
+
+      const activeButton = document.querySelector(`.difficulty-buttons button[data-difficulty='${difficulty}']`);
+      activeButton.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>
+
